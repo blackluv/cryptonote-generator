@@ -1,0 +1,68 @@
+{
+
+/* Extensions to load */ 
+"extensions": [ "core/bytecoin.json", "print-genesis-tx.json" ],
+
+/* Source coin. Bytecoin example */ 
+"base_coin":{
+	"name":"bytecoin",		
+	"git":"https://github.com/amjuarez/bytecoin.git"
+},
+
+"core":{
+	/* Check uniqueness with Google and Map of Coins. */
+	"CRYPTONOTE_NAME":"dotcoin",
+
+	/* Address prefix. Generate here: https://cryptonotestarter.org/inner.html */
+	"CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX":72,
+
+	"P2P_DEFAULT_PORT":56891,
+	"RPC_DEFAULT_PORT":56893,
+
+	/* Seed nodes. Use at least 2 */
+	"SEED_NODES":["34.73.210.12:56891", "34.73.17.157:58691", "34.73.175.24:58691"],
+
+	/* Array with checkpoints. */
+	"CHECKPOINTS":["28000:70d2531151529ac00bf875281e15f51324934bc85e5733dcd92e1ccb1a665ff8", "40000:c181ec9223a91fef8658c7aa364c093c41c28d250870ca1ed829bf74f0abf038", "55000:5289fe9f2dce8f51441019b9fbc85c70ad85ff49a666ef0109f3269890c6af6d", "70000:193e335f34b8b8f1fab3857111cb668c2720340e80176a25155071e573481acb", "87500:cce8a035f34457ec1098ab41e5949cac3db00ebff3503e26f36bfa057543095a", "91453:ad46d069bb2726a9bc5962cda6b2108376c0b95c157da0f09ee32458f486d87f"],
+	
+	/* Created with connectivity_tool. Leave empty if not needed */
+	"P2P_STAT_TRUSTED_PUB_KEY":"4d26c4df7f4ca7037950ad026f9ab36dd05d881952662992f2e4dcfcafbe57eb",
+
+	/* Genesis! Leave empty for new coins */
+	"GENESIS_COINBASE_TX_HEX":"",
+
+	/* Random hex, identifier for your network */
+	"BYTECOIN_NETWORK":"0x20, 0x11, 0x21, 0x11, 0x11, 0x10, 0x41, 0x01, 0x15, 0x11, 0x00, 0x12, 0x12, 0x02, 0x01, 0x10",
+
+	/* Visualize here https://cryptonotestarter.org/inner.html  */
+	/* Total amount of coins to be emitted. Most of CryptoNote-based coins use (uint64_t)(-1) (equals to 18446744073709551616).
+	   You can define number explicitly (for example UINT64_C(858986905600000000)). */
+	"MONEY_SUPPLY":"static_cast<uint64_C",
+	"EMISSION_SPEED_FACTOR":18,
+	"GENESIS_BLOCK_REWARD":2000000,
+	"DIFFICULTY_TARGET":90,   // In seconds
+
+	"MINIMUM_FEE":100000000,   // 10^6. Equals to 0.01 in Dotcoin
+	"DEFAULT_DUST_THRESHOLD":1000000,
+	"COIN":10000000000,    // Number of atom units in a coin. 10^10 in Dotcoin
+	"CRYPTONOTE_DISPLAY_DECIMAL_POINT":10,    // The pow from the previews value
+
+	"CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW":10,    // in blocks
+	"CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE":20000,    // in bytes
+
+	"DIFFICULTY_CUT":60,  // timestamps to cut after sorting
+	"DIFFICULTY_LAG":15,
+
+	/* USED ONLY IN OLD COINS. IF YOU UPDATE CHANGE THIS TO YOUR OLD CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE */
+	"CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1":20000,
+
+	/* ONLY USED IN OLD COINS. IT WILL HARDFORK YOUR COIN AT THIS BLOCK */
+	"UPGRADE_HEIGHT":91452,
+
+	/* Max initial block size */
+	"MAX_BLOCK_SIZE_INITIAL":"25 * 1024"
+
+	/* Max initial block size */
+	"EXPECTED_NUMBER_OF_BLOCKS_PER_DAY":"24 * 60 * 60 / 90"
+}
+}
