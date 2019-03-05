@@ -20,7 +20,7 @@
 	"RPC_DEFAULT_PORT":56893,
 
 	/* Seed nodes. Use at least 2 */
-	"SEED_NODES":["34.73.210.12:56891", "34.73.17.157:58691", "34.73.175.24:58691"],
+	"SEED_NODES":["35.185.35.117:56891",34.73.210.12":58691"],
 
 	/* Array with checkpoints. */
 	"CHECKPOINTS":["28000:70d2531151529ac00bf875281e15f51324934bc85e5733dcd92e1ccb1a665ff8", "40000:c181ec9223a91fef8658c7aa364c093c41c28d250870ca1ed829bf74f0abf038", "55000:5289fe9f2dce8f51441019b9fbc85c70ad85ff49a666ef0109f3269890c6af6d", "70000:193e335f34b8b8f1fab3857111cb668c2720340e80176a25155071e573481acb", "87500:cce8a035f34457ec1098ab41e5949cac3db00ebff3503e26f36bfa057543095a", "91453:ad46d069bb2726a9bc5962cda6b2108376c0b95c157da0f09ee32458f486d87f"],
@@ -37,7 +37,7 @@
 	/* Visualize here https://cryptonotestarter.org/inner.html  */
 	/* Total amount of coins to be emitted. Most of CryptoNote-based coins use (uint64_t)(-1) (equals to 18446744073709551616).
 	   You can define number explicitly (for example UINT64_C(858986905600000000)). */
-	"MONEY_SUPPLY":"static_cast<uint64_C",
+	"MONEY_SUPPLY":"static_cast<UINT64_C(858986905600000000)),
 	"EMISSION_SPEED_FACTOR":18,
 	"GENESIS_BLOCK_REWARD":2000000,
 	"DIFFICULTY_TARGET":90,   // In seconds
